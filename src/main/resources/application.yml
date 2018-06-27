@@ -1,0 +1,35 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+  datasource: 
+    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+
+naver:
+  client:
+    clientId: FtU5v41btODr2f_8RrFx
+    clientSecret: 8wgxtNPViW
+    accessTokenUri: https://nid.naver.com/oauth2.0/token
+    userAuthorizationUri: https://nid.naver.com/oauth2.0/authorize
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://openapi.naver.com/v1/nid/me
+ 
+  logging:
+    level:
+      com.boot.blog: DEBUG
+        
